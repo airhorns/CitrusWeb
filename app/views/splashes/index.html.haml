@@ -1,0 +1,19 @@
+%h1 Listing splashes
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @splashes.each do |splash|
+    %tr
+      %td= splash.name
+      %td= link_to 'Show', splash
+      %td= link_to 'Edit', edit_splash_path(splash)
+      %td= link_to 'Destroy', splash, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Splash', new_splash_path

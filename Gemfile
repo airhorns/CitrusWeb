@@ -27,6 +27,8 @@ group :development do
   gem "jquery-rails", "0.1.3" # Template generator for jQuery
   gem 'rails3-generators'     # Template generator for Mongo Mapper
   gem "passenger", "~> 3.0.0"
+  gem "heroku"
+  gem "heroku_plus"
 end
 
 group :test do

@@ -11,8 +11,8 @@ test:
   database: citrus_test
 
 # set these environment variables on your prod server
-production:
-  <<: *defaults
-  database: citrus
-  username: <%= ENV['MONGO_USERNAME'] %>
-  password: <%= ENV['MONGO_PASSWORD'] %>
+# production:
+#   <<: *defaults
+#   database: citrus
+#   username: <%= ENV['MONGO_USERNAME'] %>
+#   password: <%= ENV['MONGO_PASSWORD'] %>

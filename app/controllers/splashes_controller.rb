@@ -1,52 +1,47 @@
 class SplashesController < ApplicationController
   respond_to :html, :json
   
+  before_filter do
+    @available_action_types = Splash.available_actions.collect {|x|
+      [x.name.split('::')[1..-1].map(&:titleize).join(" -> "), x]
+    }
+    true
+  end
+  
   def index
     @splashes = Splash.all
 
     respond_with(@splashes)
   end
-
-  
   
   def show
-    @splash = Splash.first(params[:id])
+    @splash = Splash.find_by_id(params[:id])
     respond_with(@splash)
   end
-
-  
   
   def new
     @splash = Splash.new
     respond_with(@splash)
   end
 
-  
   def edit
-    @splash = Splash.first(params[:id])
+    @splash = Splash.find_by_id(params[:id])
   end
-
-  
   
   def create
     @splash = Splash.new(params[:splash])
-    flash[:notice] => 'Splash was successfully created.' if @splash.save
+    flash[:notice] = 'Splash was successfully created.' if @splash.save
     respond_with(@splash)
   end
-
-  
   
   def update
-    @splash = Splash.first(params[:id])
-    flash[:notice] = 'Splash was successfully updated.' if @splash.update(params[:splash])
+    @splash = Splash.find_by_id(params[:id])
+    flash[:notice] = 'Splash was successfully updated.' if @splash.update_attributes(params[:splash])
     respond_with(@splash)
   end
-
-  
   
   def destroy
-    @splash = Splash.first(params[:id])
+    @splash = Splash.find_by_id(params[:id])
     @splash.destroy
-    @splash = Splash.first(params[:id])
   end
 end

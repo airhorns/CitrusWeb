@@ -7,12 +7,14 @@ gem "mongo_mapper", :git => "git://github.com/jnunemaker/mongomapper", :branch =
 gem "mongo", "1.1.1"
 gem "bson_ext", "1.1.1"
 
-
+# Thank FSM for Plataformatec
 gem "devise", "1.1.3"
 gem 'devise-mongo_mapper', :git => 'git://github.com/collectiveidea/devise-mongo_mapper'
+gem "simple_form"
 
 gem "haml", "3.0.18"
 gem "responders", "0.6.2"
+gem "ruby-debug19", :require => "ruby-debug"
 
 # group :production do
 #   gem "heroku", "1.10.5"
@@ -48,11 +50,11 @@ end
 
 group :development, :test do
   # gem "mocha"
+#  gem "ruby-debug19", :require => "ruby-debug"
   gem "rspec-rails", "2.0.0.beta.22"
   # gem 'cucumber-rails', '0.3.2'
 end
 
 group :console do
-  gem "wirble"
-  gem "hirb"
+  gem "irbtools"
 end

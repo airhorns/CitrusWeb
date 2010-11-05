@@ -14,7 +14,7 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 module Citrus
   class Application < Rails::Application
   
-    config.action_view.javascript_expansions[:defaults] = %w(jquery.min rails)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -44,6 +44,8 @@ module Citrus
       g.template_engine :haml
       g.test_framework  :rspec, :fixture => true
     end
+
+#    ActionController::Base.rescue_responses['MongoMapper::DocumentNotFound'] = :not_found
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

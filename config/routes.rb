@@ -1,6 +1,15 @@
 Citrus::Application.routes.draw do
-  resources :splashes
 
+  resources :splashes do
+    resources :codes do
+      member do
+        get 'move'
+      end
+    end
+  end
+
+  match 's/:shortcode' => 'codes#shortcode'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

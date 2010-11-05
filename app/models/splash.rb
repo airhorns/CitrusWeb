@@ -1,31 +1,6 @@
 class Splash
-  include MongoMapper::Document         
-
-# Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
-# validates_presence_of :attribute
-
-# Assocations :::::::::::::::::::::::::::::::::::::::::::::::::::::
-# belongs_to :model
-# many :model
-# one :model
-
-# Callbacks ::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
-# before_create :your_model_method
-# after_create :your_model_method
-# before_update :your_model_method 
-
-# Attribute options extras ::::::::::::::::::::::::::::::::::::::::
-# attr_accessible :first_name, :last_name, :email
-
-# Validations
-# key :name, :required =>  true      
-
-# Defaults
-# key :done, :default => false
-
-# Typecast
-# key :user_ids, Array, :typecast => 'ObjectId'
-  
+  include MongoMapper::Document
+  include NestedAttributes
    
   key :name, String
   key :text, String
@@ -34,6 +9,16 @@ class Splash
   validates_presence_of :name
   
   many :codes
-  many :actions
-  
+  accepts_nested_attributes_for :codes
+  validates_associated :codes
+
+  many :actions, :class_name => "Actions::Action"
+  accepts_nested_attributes_for :actions
+  validates_associated :actions
+
+  def self.available_actions
+    [Actions::Twitter::FollowAction,
+     Actions::Twitter::StatusUpdateAction,
+     Actions::Twitter::RetweetAction]
+  end
 end

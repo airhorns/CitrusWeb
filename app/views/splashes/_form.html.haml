@@ -1,13 +1,12 @@
-= form_for @splash do |f|
-  -if @splash.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@splash.errors.count, "error")} prohibited this splash from being saved:"
-      %ul
-        - @splash.errors.full_messages.each do |msg|
-          %li= msg
+=  simple_form_for @splash do |f|
+  = f.input :name
+  = f.input :description
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .actions
-    = f.submit 'Save'
+  = f.simple_fields_for :actions do |af|
+    = render 'actions/form', :form => af
+
+  = f.simple_fields_for :codes do |cf|
+    = cf.input :shortcode
+    = cf.input :splash_id, :as => :hidden
+
+  = f.button :submit

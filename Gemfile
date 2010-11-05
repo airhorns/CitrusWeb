@@ -51,7 +51,7 @@ end
 
 group :development, :test do
   # gem "mocha"
-  gem "ruby-debug19", :require => "ruby-debug"
+#  gem "ruby-debug19", :require => "ruby-debug"
   gem "rspec-rails", "2.0.0.beta.22"
   # gem 'cucumber-rails', '0.3.2'
 end

@@ -31,6 +31,7 @@ group :development do
   gem "passenger", "~> 3.0.0"
   gem "heroku"
   gem "heroku_plus"
+  #gem "ruby-debug19", :require => "ruby-debug"
 end
 
 group :test do
@@ -54,7 +55,6 @@ end
 
 group :development, :test do
   # gem "mocha"
-  gem "ruby-debug19", :require => "ruby-debug"
   gem "rspec-rails", "2.0.0.beta.22"
   # gem 'cucumber-rails', '0.3.2'
 end

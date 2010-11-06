@@ -1,6 +1,6 @@
 =  simple_form_for @splash do |f|
   = f.input :name
-  = f.input :description
+  = f.input :text
 
   = f.simple_fields_for :actions do |af|
     = render 'actions/form', :form => af

@@ -8,7 +8,7 @@ class Code
   validates_presence_of :shortcode, :splash_id
 
   def full_url
-    "http://localhost:3000/"+self.shortcode
+    "http://citrus.heroku.com/"+self.shortcode
   end
 
   def filename
@@ -17,7 +17,7 @@ class Code
 
   def qr
     unless @qr.present?
-      qr = RQRCode::QRCode.new(self.shortcode, :size => 6, :level => :q)
+      qr = RQRCode::QRCode.new(self.full_url, :size => 6, :level => :q)
       @qr = ::QrImage.new(qr).sample(4)
       @qr.format = "png"
     end

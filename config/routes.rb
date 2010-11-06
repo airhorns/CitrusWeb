@@ -7,6 +7,10 @@ Citrus::Application.routes.draw do
       end
     end
   end
+  
+  resources :codes do
+    get :image
+  end
 
   match 's/:shortcode' => 'codes#shortcode'
   

@@ -15,6 +15,9 @@ gem "simple_form"
 gem "haml", "3.0.18"
 gem "responders", "0.6.2"
 
+gem "rqrcode"
+gem "rmagick"
+
 # group :production do
 #   gem "heroku", "1.10.5"
 # end
@@ -51,7 +54,7 @@ end
 
 group :development, :test do
   # gem "mocha"
-#  gem "ruby-debug19", :require => "ruby-debug"
+  gem "ruby-debug19", :require => "ruby-debug"
   gem "rspec-rails", "2.0.0.beta.22"
   # gem 'cucumber-rails', '0.3.2'
 end

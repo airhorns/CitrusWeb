@@ -3,6 +3,21 @@
 %p
   %b Name:
   = @splash.name
+%p
+  %b Text:
+  = @splash.text
+%p
+  %b Photo:
+  = image_tag @splash.photo if @splash.photo
+%p
+  %b 
+    Actions:
+    = @splash.actions.length
+%p
+  %b Codes leading to this splash
+  %br
+  - @splash.codes.each do |code|
+    = image_tag code_image_path(code)
 
 = link_to 'Edit', edit_splash_path(@splash)
 \|

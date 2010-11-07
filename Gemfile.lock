@@ -220,7 +220,7 @@ DEPENDENCIES
   remarkable (= 4.0.0.alpha4)
   remarkable_mongo
   responders (= 0.6.2)
-  rmagick
+  rmagick (>= 2.0.0)
   rqrcode
   rspec (= 2.0.0.beta.22)
   rspec-rails (= 2.0.0.beta.22)

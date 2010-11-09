@@ -4,11 +4,11 @@ class Code
   key :shortcode, String
   key :splash_id, ObjectId
   
-  belongs_to :splash  
+  belongs_to :splash
   validates_presence_of :shortcode, :splash_id
 
   def full_url
-    "http://citrus.heroku.com/s/"+self.shortcode
+    (Rails.env == "development" ? "http://localhost:3000/s/" : "http://citrus.heroku.com/s/") + self.shortcode
   end
 
   def filename

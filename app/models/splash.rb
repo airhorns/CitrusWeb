@@ -17,8 +17,14 @@ class Splash
   validates_associated :actions
 
   def self.available_actions
-    [Actions::Twitter::FollowAction,
+    [
+     Actions::Twitter::FollowAction,
      Actions::Twitter::StatusUpdateAction,
-     Actions::Twitter::RetweetAction]
+     Actions::Twitter::RetweetAction,
+     Actions::Facebook::PublishStreamAction,
+     Actions::Paypal::DonateAction,
+     Actions::Platform::VisitLinkAction,
+     Actions::Platform::CallAction
+    ]
   end
 end

@@ -1,10 +1,12 @@
 =  simple_form_for @splash do |f|
   = f.input :name
   = f.input :text
+  = f.input :photo
 
+  %h3 Actions
   = f.simple_fields_for :actions do |af|
     = render 'actions/form', :form => af
-
+  %h3 Codes
   = f.simple_fields_for :codes do |cf|
     = cf.input :shortcode
     = cf.input :splash_id, :as => :hidden

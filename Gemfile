@@ -31,7 +31,7 @@ group :development do
   gem "passenger", "~> 3.0.0"
   gem "heroku"
   gem "heroku_plus"
-  #gem "ruby-debug19", :require => "ruby-debug"
+  gem "ruby-debug19", :require => "ruby-debug"
 end
 
 group :test do

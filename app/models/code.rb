@@ -17,8 +17,8 @@ class Code
 
   def qr
     unless @qr.present?
-      qr = RQRCode::QRCode.new(self.full_url, :size => 3, :level => :m)
-      @qr = ::QrImage.new(qr).sample(4)
+      qr = RQRCode::QRCode.new(self.full_url, :size => 4, :level => :q)
+      @qr = ::CitrusQrImage.new(qr).sample(4)
       @qr.format = "png"
     end
     @qr

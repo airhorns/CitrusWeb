@@ -60,5 +60,5 @@ group :development, :test do
 end
 
 group :console do
-  gem "irbtools"
+#  gem "irbtools"
 end

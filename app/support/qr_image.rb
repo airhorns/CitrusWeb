@@ -11,7 +11,7 @@ class QrImage < Magick::Image
   
   BLACK = 0
   WHITE = 65535
-  
+  BORDER_WIDTH = 2 
   #
   # Creates a new QR Code image that represents the passed 
   # RQRCode::QRCode instance.
@@ -23,11 +23,12 @@ class QrImage < Magick::Image
   #    
   def initialize(qr)
     @qr = qr
-    height = qr.module_count
+    height = qr.module_count + 2 * BORDER_WIDTH
     super(height, height)
-    self.import_pixels(0, 0, height, height, "I", get_pixmap, 
+    self.import_pixels(BORDER_WIDTH, BORDER_WIDTH, qr.module_count, qr.module_count, "I", get_pixmap, 
       Magick::CharPixel)
     self.format = 'png'
+    self.border(BORDER_WIDTH, BORDER_WIDTH, '#FFF')
   end
   
   private

@@ -6,8 +6,7 @@ module Actions
         "Follow me on twitter"
       end
 
-      key :followee_id, Fixnum
-      
+      key :followee_id, Fixnum      
     end
   end
 end

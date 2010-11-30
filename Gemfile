@@ -19,7 +19,7 @@ gem "rqrcode"
 gem "rmagick", ">= 2.0.0"
 
 gem "compass"
-# gem 'hassle', :git => 'https://github.com/koppen/hassle.git'
+gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 
 # group :production do
 #   gem "heroku", "1.10.5"

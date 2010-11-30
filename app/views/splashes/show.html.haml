@@ -6,13 +6,19 @@
 %p
   %b Text:
   = @splash.text
-%p
-  %b Photo:
-  = image_tag @splash.photo if @splash.photo
+
+- if @splash.photo.present? && @splash.photo.length > 0
+  %p
+    %b Photo:
+    = image_tag @splash.photo
 %p
   %b 
     Actions:
-    = @splash.actions.length
+  %ul
+    - @splash.actions.each do |action|
+      %li 
+        = "#{action.action_text} - #{action.class.name.split("::")[1..-1].join().underscore.titleize}"
+
 %p
   %b Codes leading to this splash
   %br

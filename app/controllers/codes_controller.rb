@@ -1,6 +1,10 @@
 class CodesController < ApplicationController
   respond_to :html, :json
-  
+ 
+  def new
+    respond_with Code.build
+  end
+
   def shortcode
     @code = Code.find_by_shortcode(params[:shortcode])
     if @code
@@ -18,6 +22,5 @@ class CodesController < ApplicationController
     else
       render :nothing => true, :status => 404
     end
-  end
-  
+  end  
 end

@@ -329,7 +329,7 @@ body.bp .bottom {
 }
 /* line 8, ../../../../.rvm/gems/ruby-1.9.2-p0@citrus/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body.bp .showgrid {
-  background: url('/images/grid.png?1291080488');
+  background: url('/images/grid.png?1291084991');
 }
 /* line 4, ../../../../.rvm/gems/ruby-1.9.2-p0@citrus/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body.bp .error {
@@ -638,9 +638,8 @@ body.bp .actions {
   width: 100%;
   padding-top: 20px;
   clear: both;
-  min-height: 700px;
 }
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 body.bp form.bp .input {
   display: inline;
   float: left;
@@ -651,9 +650,13 @@ body.bp form.bp .input {
 * html body.bp form.bp .input {
   overflow-x: hidden;
 }
-/* line 45, ../../app/stylesheets/screen.sass */
+/* line 44, ../../app/stylesheets/screen.sass */
 body.bp form.bp .input label {
   width: 80px;
   padding: 10px 10px 0px 0px;
   float: left;
+}
+/* line 50, ../../app/stylesheets/screen.sass */
+body.bp #footer p {
+  margin-top: 20px;
 }

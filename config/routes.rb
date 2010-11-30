@@ -7,6 +7,8 @@ Citrus::Application.routes.draw do
       end
     end
   end
+
+  resources :actions
   
   resources :codes do
     get :image

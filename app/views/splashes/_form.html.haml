@@ -1,18 +1,24 @@
 =  simple_form_for @splash, :html => {:class => "bp"} do |f|
+  = f.input :id, :as => :hidden
   = f.input :name
   = f.input :text
   = f.input :photo
 
   %h3 Actions
-  = f.simple_fields_for :actions do |af|
-    %div{:class => "action_box #{cycle("pane", "last-pane")}"}
-      = render 'actions/form', :form => af
-  %a.add_new_action add new
-  %div.window
+  #actions_list
+    = f.simple_fields_for :actions do |af|
+      %div{:class => "action_box #{cycle("pane", "last-pane")}"}
+        = render 'actions/form', :form => af
+
+  .actions
+    %a.add_new_action Add New Action    
+    = select_tag 'new_action_type', options_for_select(@available_action_types)
+  
+  .window
     %h3 Codes
     = f.simple_fields_for :codes do |cf|
       = cf.input :shortcode
       = cf.input :splash_id, :as => :hidden
   
-  %div.actions
+  .actions
     = f.button :submit

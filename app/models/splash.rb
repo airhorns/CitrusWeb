@@ -9,11 +9,11 @@ class Splash
   validates_presence_of :name
   
   many :codes
-  accepts_nested_attributes_for :codes
+  accepts_nested_attributes_for :codes, :allow_destroy => true
   validates_associated :codes
 
   many :actions, :class_name => "Actions::Action"
-  accepts_nested_attributes_for :actions
+  accepts_nested_attributes_for :actions, :allow_destroy => true
   validates_associated :actions
 
   def self.available_actions

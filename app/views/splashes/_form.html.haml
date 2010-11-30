@@ -7,18 +7,20 @@
   %h3 Actions
   #actions_list
     = f.simple_fields_for :actions do |af|
-      %div{:class => "action_box #{cycle("pane", "last-pane")}"}
+      %div.action_box
         = render 'actions/form', :form => af
 
   .actions
     %a.add_new_action Add New Action    
     = select_tag 'new_action_type', options_for_select(@available_action_types)
-  
-  .window
-    %h3 Codes
+
+  %h3 Codes
+  #codes_list.window
     = f.simple_fields_for :codes do |cf|
-      = cf.input :shortcode
-      = cf.input :splash_id, :as => :hidden
+      = render 'codes/form', :form => cf
+  
+  .actions
+    %a.add_new_code Add New Code
   
   .actions
     = f.button :submit

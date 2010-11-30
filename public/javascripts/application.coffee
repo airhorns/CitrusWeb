@@ -9,22 +9,34 @@ $(document).ready ->
 					container.html("Loading ...")
 			success: (responseText) ->
 				container.html(responseText)
-				$('input.action-id', container).val($('#splash_id').val())
 			error: () ->
 				container.html("Error!")
 
 	$('form.splash select.type-changer').live 'change', () ->
 		loadActionForm $(this).parent().parent(), $(this).val()
 
-	nextPaneClass = "pane"
+	$('form.splash a.delete_action').live 'click', () ->
+		container = $(this).parent()
+		$('input.destroy_action', container).val(1)
+		container.hide()
+
 	$('form.splash a.add_new_action').click (e) ->
 		e.preventDefault()
-		lastPane = $('form.splash .action_box:last')
-		if lastPane.length > 0
-			nextPaneClass = if lastPane.hasClass('pane') then "last_pane" else "pane"
 		container = $('<div class="action_box">').addClass(nextPaneClass)
 
 		container.appendTo('#actions_list')
 		loadActionForm container, $('#new_action_type').val()
+	
+	$('form.splash a.add_new_code').click (e) ->
+		e.preventDefault()
+		container = $('#codes_list')
+		$.ajax
+			url: "/codes/new"
+			type: "GET"
+			success: (responseText) ->
+				container.append(responseText)
+				$('input.splash_id', container).val($('#splash_id').val())
+			error: () ->
+				container.append("Error loading new code! Please try again.")
+				
 
-		

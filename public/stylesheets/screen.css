@@ -591,11 +591,11 @@ body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
   width: 100%;
   border-bottom: 1px #dddddd dashed;
 }
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 24, ../../app/stylesheets/screen.sass */
 body.bp #container {
   background-color: white;
 }
-/* line 25, ../../app/stylesheets/screen.sass */
+/* line 26, ../../app/stylesheets/screen.sass */
 body.bp #container .window {
   display: inline;
   float: left;
@@ -606,7 +606,7 @@ body.bp #container .window {
 * html body.bp #container .window {
   overflow-x: hidden;
 }
-/* line 27, ../../app/stylesheets/screen.sass */
+/* line 28, ../../app/stylesheets/screen.sass */
 body.bp #container .pane {
   display: inline;
   float: left;
@@ -617,12 +617,12 @@ body.bp #container .pane {
 * html body.bp #container .pane {
   overflow-x: hidden;
 }
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
 body.bp #container .pane.right {
   margin-right: -1px;
   float: right !important;
 }
-/* line 32, ../../app/stylesheets/screen.sass */
+/* line 33, ../../app/stylesheets/screen.sass */
 body.bp #container .pane + .pane, body.bp #container .last-pane {
   display: inline;
   float: left;
@@ -633,13 +633,13 @@ body.bp #container .pane + .pane, body.bp #container .last-pane {
 * html body.bp #container .pane + .pane, * html body.bp #container .last-pane {
   overflow-x: hidden;
 }
-/* line 35, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 body.bp .actions {
   width: 100%;
   padding-top: 20px;
   clear: both;
 }
-/* line 41, ../../app/stylesheets/screen.sass */
+/* line 42, ../../app/stylesheets/screen.sass */
 body.bp form.bp .input {
   display: inline;
   float: left;
@@ -650,13 +650,21 @@ body.bp form.bp .input {
 * html body.bp form.bp .input {
   overflow-x: hidden;
 }
-/* line 44, ../../app/stylesheets/screen.sass */
+/* line 45, ../../app/stylesheets/screen.sass */
 body.bp form.bp .input label {
   width: 80px;
   padding: 10px 10px 0px 0px;
   float: left;
 }
-/* line 50, ../../app/stylesheets/screen.sass */
+/* line 51, ../../app/stylesheets/screen.sass */
+body.bp .action_box {
+  width: 455px;
+  margin: 0px 8px 8px 0px;
+  border: 1px #cccccc solid;
+  padding: 5px;
+  float: left;
+}
+/* line 58, ../../app/stylesheets/screen.sass */
 body.bp #footer p {
   margin-top: 20px;
 }

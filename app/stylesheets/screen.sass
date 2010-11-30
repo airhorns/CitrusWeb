@@ -1,0 +1,49 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset"
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base"
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint"
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page"
+@import "partials/form"
+
+// Sticky footer info is in here
+@import "partials/two_col"
+
+body.bp
+  background-color: #DDD
+  h1,h2,h3,h4,h5,h6
+    clear: both
+    width: 100%
+    border-bottom: 1px #DDD dashed
+  #container
+    background-color: #FFF
+    .window
+      +column($content-columns, true)
+    .pane
+      +column($content-columns / 2)
+      &.right
+        margin-right: -1px
+        float: right !important
+    .pane + .pane, .last-pane
+      +column($content-columns / 2, true)
+
+  .actions
+    width: 100%
+    padding-top: 20px
+    clear: both
+    min-height: 700px
+
+  form.bp
+    .input
+      +column(floor($content-columns / 2), true)
+      
+      label
+        width: 80px
+        padding: 10px 10px 0px 0px
+        float: left
+      input

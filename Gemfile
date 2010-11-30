@@ -18,6 +18,7 @@ gem "responders", "0.6.2"
 gem "rqrcode"
 gem "rmagick", ">= 2.0.0"
 
+gem "compass"
 # group :production do
 #   gem "heroku", "1.10.5"
 # end

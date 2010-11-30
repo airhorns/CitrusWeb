@@ -54,6 +54,8 @@ GEM
     bson_ext (1.1.1)
     builder (2.1.2)
     columnize (0.3.1)
+    compass (0.10.5)
+      haml (>= 3.0.4)
     configuration (1.1.0)
     daemon_controller (0.2.5)
     devise (1.1.3)
@@ -184,6 +186,7 @@ PLATFORMS
 DEPENDENCIES
   autotest
   bson_ext (= 1.1.1)
+  compass
   devise (= 1.1.3)
   devise-mongo_mapper!
   faker

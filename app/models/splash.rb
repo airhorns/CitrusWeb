@@ -24,7 +24,9 @@ class Splash
      Actions::Facebook::PublishStreamAction,
      Actions::Paypal::DonateAction,
      Actions::Platform::VisitLinkAction,
-     Actions::Platform::CallAction
+     Actions::Platform::CallAction,
+     Actions::Foursquare::CheckInAction,
+     Actions::Mailchimp::SubscribeAction
     ]
   end
 end

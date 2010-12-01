@@ -657,6 +657,18 @@ body.bp form.bp .input label {
   float: left;
 }
 /* line 51, ../../app/stylesheets/screen.sass */
+body.bp form.bp .input.field_with_errors input {
+  border: 2px solid #fbc2c4;
+  margin-bottom: 0px;
+}
+/* line 55, ../../app/stylesheets/screen.sass */
+body.bp form.bp .input.field_with_errors .error {
+  display: block;
+  border-top: 0px;
+  margin-left: 90px;
+  width: 292px;
+}
+/* line 62, ../../app/stylesheets/screen.sass */
 body.bp .action_box {
   width: 455px;
   margin: 0px 8px 8px 0px;
@@ -664,7 +676,7 @@ body.bp .action_box {
   padding: 5px;
   float: left;
 }
-/* line 58, ../../app/stylesheets/screen.sass */
+/* line 69, ../../app/stylesheets/screen.sass */
 body.bp #footer p {
   margin-top: 20px;
 }

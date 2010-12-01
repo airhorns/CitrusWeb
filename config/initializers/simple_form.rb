@@ -12,7 +12,7 @@ SimpleForm.setup do |config|
   config.error_tag = :span
 
   # Method used to tidy up errors.
-  config.error_method = :first
+  config.error_method = :map
 
   # Default tag used for error notification helper.
   config.error_notification_tag = :p

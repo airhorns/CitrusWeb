@@ -24,7 +24,7 @@ en:
       action:
         type: "Kind"
       code:
-        shortcode: "URL Shortened Shortcode"
+        shortcode: "Shortcode"
     hints:
       username: 'User name to sign in.'
       password: 'No special characters, please.'

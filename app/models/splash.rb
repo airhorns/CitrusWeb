@@ -26,6 +26,7 @@ class Splash
      Actions::Platform::VisitLinkAction,
      Actions::Platform::CallAction,
      Actions::Foursquare::CheckInAction,
+     Actions::Foursquare::SendFriendRequestAction,     
      Actions::Mailchimp::SubscribeAction
     ]
   end

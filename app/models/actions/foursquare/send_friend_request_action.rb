@@ -1,10 +1,11 @@
 module Actions
   module Foursquare
     class SendFriendRequestAction < FoursquareAction
-      validates_presence_of :user_id
-      key :user_id, String 
+      key :user_id, String
+      validates_presence_of :user_id      
+      attr_accessible :user_id
       def self.default_action_text
-        "Add as a foursquare friend"
+        "add as a foursquare friend"
       end
     end
   end

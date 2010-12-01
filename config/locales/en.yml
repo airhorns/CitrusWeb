@@ -2,4 +2,9 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activemodel:
+    errors:
+      code:
+        shortcode:
+          taken: "has already been used by another code. Please try a different shortcode."
   hello: "Hello world"

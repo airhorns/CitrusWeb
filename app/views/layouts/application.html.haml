@@ -17,6 +17,9 @@
           = link_to "Citrus", root_path
       #sidebar
       #content
+        - [:error, :notice, :success, :alert].select {|f| flash[f].present? }.each do |f|
+          %div(class=f)
+            = flash[f]
         = yield
         #container_footer &nbsp;
     #footer

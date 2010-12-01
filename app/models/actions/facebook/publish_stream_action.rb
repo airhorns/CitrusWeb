@@ -8,7 +8,9 @@ module Actions
 
       key :title, String
       key :data, Hash
-      key :target, String  
+      key :target, String
+      attr_accessible :title, :data, :target
+      validates_presence_of :title
     end
   end
 end

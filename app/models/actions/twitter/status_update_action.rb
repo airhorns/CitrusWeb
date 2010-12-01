@@ -1,7 +1,6 @@
 module Actions
   module Twitter
     class StatusUpdateAction < TwitterAction
-      validates_presence_of :text
       
       def self.default_action_text
         "Tweet about this"
@@ -9,7 +8,8 @@ module Actions
 
       key :text, String
       key :in_reply_to_id, Fixnum
-      
+      validates_presence_of :text
+      attr_accessible :text, :in_reply_to_id      
     end
   end
 end

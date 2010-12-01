@@ -1,0 +1,4 @@
+= simple_form_for @splash do |f|
+  = f.simple_fields_for :codes, @code, :child_index => "NEW_RECORD" do |cf|
+    .pluck
+      = render 'codes/form', :form => cf

@@ -1,3 +1,4 @@
 = simple_form_for @splash do |f|
-  = f.simple_fields_for :actions, @action do |af|
-    = render 'actions/form', :form => af
+  = f.simple_fields_for :actions, @action, :child_index => "NEW_RECORD" do |af|
+    .pluck
+      = render 'actions/form', :form => af

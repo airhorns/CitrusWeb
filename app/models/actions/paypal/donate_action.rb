@@ -8,6 +8,10 @@ module Actions
       key :amount, Float
       key :recipient, String
       key :merchant_name, String
+
+      validates_numericality_of :amount
+      validates_presence_of :amount, :recipient, :merchant_name
+      attr_accessible :amount, :recipient, :merchant_name
     end
   end
 end

@@ -7,7 +7,7 @@ module Actions
 
     key :_type, String
     key :action_text, String
-
+    attr_accessible :_type, :action_text
     validates_presence_of :_type
     validates_length_of :action_text, :in => 5..30
   end

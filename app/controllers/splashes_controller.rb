@@ -21,6 +21,7 @@ class SplashesController < ApplicationController
   
   def new
     @splash = Splash.new
+    @splash.codes.build
     respond_with(@splash)
   end
 

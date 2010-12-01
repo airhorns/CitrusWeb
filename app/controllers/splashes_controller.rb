@@ -42,6 +42,7 @@ class SplashesController < ApplicationController
   
   def destroy
     @splash = Splash.find_by_id(params[:id])
-    @splash.destroy
+    flash[:notice] = 'Splash was successfully destroyed.' if @splash.destroy
+    redirect_to splashes_path
   end
 end

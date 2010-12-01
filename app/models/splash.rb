@@ -11,10 +11,13 @@ class Splash
   many :codes
   accepts_nested_attributes_for :codes, :allow_destroy => true
   validates_associated :codes
-
-  many :actions, :class_name => "Actions::Action"
+  
+  many :actions, :polymorphic => true, :class_name => "Actions::Action"
   accepts_nested_attributes_for :actions, :allow_destroy => true
   validates_associated :actions
+  
+  validates_length_of :codes, :actions, :minimum => 1
+  
 
   def self.available_actions
     [

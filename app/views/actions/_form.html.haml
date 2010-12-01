@@ -1,6 +1,6 @@
 -# Form builder is passed in as 'form'
-= form.input :_destroy, :as => :hidden, :input_html => {:class => "destroy_action", :value => 0}
-= form.input :_type, :label => "Action Type", :input_html => {:class => "type-changer"}, :collection => @available_action_types, :include_blank => false
+= form.input :_destroy, :as => :hidden, :input_html => {:class => "destroy", :value => 0}
+= form.input :_type, :input_html => {:class => "type-changer"}, :collection => @available_action_types, :include_blank => false
 - form.object.keys.reject {|k, v| ["_id", "_type", "action_text"].include? k }.each do |k, v|
   = form.input k
 = form.input :action_text

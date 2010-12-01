@@ -33,10 +33,10 @@
         return false;
       }
     });
-    $('form.splash a.delete_action').live('click', function(e) {
+    $('form.splash a.delete_action, form.splash a.delete_code').live('click', function(e) {
       var container;
       container = $(this).parent();
-      $('input.destroy_action', container).val(1);
+      $('input.destroy', container).val(1);
       return container.hide();
     });
     $('form.splash a.add_new_action').click(function(e) {

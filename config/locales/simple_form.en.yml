@@ -13,16 +13,13 @@ en:
     # Labels and hints examples
     labels:
       password: 'Password'
-      user:
-        new:
-          email: 'E-mail para efetuar o sign in.'
-        edit:
-          email: 'E-mail.'
+      url: 'URL'
       splash:
         name: "Name"
         description: "Description"
       action:
-        type: "Kind"
+        _type: "Action Type"
+        type: "Action Type"
       code:
         shortcode: "Shortcode"
     hints:

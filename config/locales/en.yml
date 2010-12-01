@@ -4,7 +4,18 @@
 en:
   activemodel:
     errors:
-      code:
-        shortcode:
-          taken: "has already been used by another code. Please try a different shortcode."
+      models:
+        splash:
+          attributes:
+            codes:
+              invalid: "Some of the codes in your splash are invalid. Please correct the errors and try again."
+              too_short: "Your splash needs at least 1 action."
+            actions:
+              invalid: "Some of the codes in your splash are invalid. Please correct the errors and try again."
+              too_short: "Your splash needs at least 1 code."
+        code:
+          attributes:
+            shortcode:
+              taken: "has already been used by another code. Please try a different shortcode."
+          
   hello: "Hello world"

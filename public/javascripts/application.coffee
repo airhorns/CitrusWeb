@@ -23,9 +23,9 @@ $(document).ready ->
 			e.preventDefault()
 			return false
 
-	$('form.splash a.delete_action').live 'click', (e) ->
+	$('form.splash a.delete_action, form.splash a.delete_code').live 'click', (e) ->
 		container = $(this).parent()
-		$('input.destroy_action', container).val(1)
+		$('input.destroy', container).val(1)
 		container.hide()
 
 	$('form.splash a.add_new_action').click (e) ->
@@ -47,5 +47,4 @@ $(document).ready ->
 				$('input.splash_id', container).val($('#splash_id').val())
 			error: () ->
 				container.append("Error loading new code! Please try again.")
-				
 

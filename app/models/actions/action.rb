@@ -15,7 +15,6 @@ module Actions
             return super(attrs)
           else
             if klass != self.class
-              puts klass
               return klass.new(attrs)
             end
           end

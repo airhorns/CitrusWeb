@@ -5,6 +5,7 @@
   = f.input :photo
 
   %h3 Actions
+  = f.error :actions unless f.object.actions.length > 0
   #actions_list
     = f.simple_fields_for :actions do |af|
       %div.action_box
@@ -15,6 +16,7 @@
     = select_tag 'new_action_type', options_for_select(@available_action_types)
 
   %h3 Codes
+  = f.error :codes unless f.object.codes.length > 0 
   #codes_list.window
     = f.simple_fields_for :codes do |cf|
       = render 'codes/form', :form => cf

@@ -8,7 +8,7 @@ class Splash
   
   validates_presence_of :name
   
-  many :codes
+  many :codes, :dependent => :destroy
   accepts_nested_attributes_for :codes, :allow_destroy => true
   validates_associated :codes
   
@@ -23,7 +23,7 @@ class Splash
     [
      Actions::Twitter::FollowAction,
      Actions::Twitter::StatusUpdateAction,
-     Actions::Twitter::RetweetAction,
+     # Actions::Twitter::RetweetAction,
      Actions::Facebook::PublishStreamAction,
      Actions::Paypal::DonateAction,
      Actions::Platform::VisitLinkAction,

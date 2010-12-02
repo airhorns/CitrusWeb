@@ -1,5 +1,6 @@
 -# Form builder passed in as form
 .window.code_box
+  = form.input :id, :as => :hidden
   = form.input :_destroy, :as => :hidden, :input_html => {:value => 0, :class => "destroy"}
   = form.input :shortcode
   %a.delete_code delete this code

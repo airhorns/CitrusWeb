@@ -1,13 +1,6 @@
 class SplashesController < ApplicationController
-  respond_to :html, :json
-  
-  before_filter do
-    @available_action_types = Splash.available_actions.collect {|x|
-      [x.name.split('::')[1..-1].map(&:titleize).join(" -> "), x]
-    }
-    true
-  end
-  
+  respond_to :json
+
   def index
     @splashes = Splash.all
 

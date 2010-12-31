@@ -1,0 +1,28 @@
+embed_assets: on
+template_function: "Citrus.renderTemplate"
+template_extension: bars
+javascripts:
+  citrus:
+    - public/javascripts/jquery.js
+    - public/javascripts/jquery-ui.js
+    - public/javascripts/uki.js
+    - public/javascripts/rails.js
+    - public/javascripts/handlebars.js
+    - public/javascripts/underscore.js
+    - public/javascripts/backbone.js
+    - client_app/views/**/*.bars
+    - public/javascripts/bootstrap.js
+    - public/javascripts/application.js
+    - public/javascripts/basic_application.js
+    - public/javascripts/views/uki_view.js
+    - public/javascripts/views/**/*.js
+    - public/javascripts/**/*.js
+    - public/javascripts/start.js
+
+stylesheets:
+  screen:
+    - public/stylesheets/screen.css
+  ie: 
+    - public/stylesheets/ie.css
+  print:
+    - public/stylesheets/print.css

@@ -15,8 +15,9 @@ Citrus::Application.routes.draw do
   end
 
   match 's/:shortcode' => 'codes#shortcode'
- 
-  root  :to => "splashes#index"
+  #match ':action', :controller => 'pages'
+  root  :to => "pages#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

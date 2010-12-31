@@ -1,0 +1,1 @@
+var Citrus = {Actions: {}, Views: {}};

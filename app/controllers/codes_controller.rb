@@ -1,5 +1,5 @@
 class CodesController < ApplicationController
-  respond_to :html, :json
+  respond_to :json
  
   def new
     @splash = Splash.new

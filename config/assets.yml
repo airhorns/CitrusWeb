@@ -14,6 +14,9 @@ javascripts:
     - public/javascripts/bootstrap.js
     - public/javascripts/application.js
     - public/javascripts/basic_application.js
+    - public/javascripts/controllers/uki_controller.js
+    - public/javascripts/controllers/citrus_controller.js
+    - public/javascripts/controllers/**/*.js
     - public/javascripts/views/uki_view.js
     - public/javascripts/views/**/*.js
     - public/javascripts/**/*.js

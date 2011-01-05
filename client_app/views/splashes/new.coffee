@@ -1,6 +1,4 @@
-Citrus.Views.NewSplashView = Backbone.UkiView.extend
-  constructor: () ->
-
+Citrus.Views.Splashes.New = Backbone.UkiView.extend
   renderable:
     view: 'HSplitPane'
     rect: '1000 600'
@@ -8,5 +6,3 @@ Citrus.Views.NewSplashView = Backbone.UkiView.extend
     handlePosition: 300
     leftMin: 200
     rightMin: 800
-
-

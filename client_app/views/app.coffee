@@ -1,11 +1,6 @@
 Citrus.Views.AppView = Backbone.UkiView.extend
   renderable:
-    view: 'Container'
-    rect: '1000 600'
-    anchors: 'left top right bottom'
-    childViews: [{
-      view: 'Label'
-      rect: '100 100'
-      anchors: 'left top'
-      text: "Test!"
-    }]
+    view: 'Box'
+    rect: '0 0 1000 1000'
+    anchors: 'top bottom right left'
+    autosize: 'width height'

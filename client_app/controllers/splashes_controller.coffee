@@ -1,16 +1,11 @@
-Citrus.SplashesController = Backbone.Controller.extend
-  views: {}
+Citrus.Views.Splashes = {}
+Citrus.SplashesController = Citrus.Controller.extend
+  viewPath: Citrus.Views.Splashes
   routes:
     "": "index"
     "splash/new": "new"
     "splash/edit": "edit"
-  
-  initialize: ->
-
-  new: ->
 
   index: ->
-    unless @views['index']?
-      @views['index'] ?= new Citrus.Views.SplashIndexView()
-      Citrus.AppView.appendChild @views['index']
-    @views['index'].visible(true)
+  new: ->
+  edit: ->

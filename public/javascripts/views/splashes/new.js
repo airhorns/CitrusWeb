@@ -1,6 +1,5 @@
 (function() {
-  Citrus.Views.NewSplashView = Backbone.UkiView.extend({
-    constructor: function() {},
+  Citrus.Views.Splashes.New = Backbone.UkiView.extend({
     renderable: {
       view: 'HSplitPane',
       rect: '1000 600',

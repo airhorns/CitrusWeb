@@ -17,7 +17,6 @@ class CitrusQrImage < ::QrImage
     pixels = self.get_pixels(0, 0, self.columns, self.rows)
     lime_pixels.each_with_index do |p, i|
       # hex color compare
-      puts p.to_color(Magick::AllCompliance, false, 16, true)
       if p.to_color(Magick::AllCompliance, false, 16, true) != "#000000000000"
         pixels[i] = p
       end

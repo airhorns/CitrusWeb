@@ -49,7 +49,7 @@ group :test, :development do
   #gem 'akephalos', :git => "https://github.com/thoughtbot/akephalos.git"
   gem 'database_cleaner'
 
-  gem 'evergreen', '0.4.0', :require => 'evergreen/rails'
+  gem 'evergreen', '0.4.0', :require => 'evergreen/rails', :path => "~/Code/evergreen"
 
   # For cucumber-rails
   # gem 'cucumber', "0.9.0"

@@ -7,32 +7,33 @@
     })(),
     rootView: window,
     _bindRoutes: function() {
-      var callback, name, route, _ref, _results;
+      var callback, name, route, _ref;
       if (this.routes == null) {
         return;
       }
+      callback = function(name) {
+        var view, _ref;
+        console.log("" + name + " action has been called.");
+        if (this.views[name] == null) {
+          this.views[name] = new (this._viewForAction(name))();
+          this.rootView.append(this.views[name]);
+        }
+        _ref = this.views;
+        for (name in _ref) {
+          view = _ref[name];
+          view.visible(false);
+        }
+        this.views[name].visible(true);
+        this.views[name].layout();
+        return this[name]();
+      };
       _ref = this.routes;
-      _results = [];
       for (route in _ref) {
         name = _ref[route];
-        callback = function() {
-          var view, _base, _i, _len, _ref, _ref2;
-          if (this.views[name] == null) {
-            (_ref = (_base = this.views)[name]) != null ? _ref : _base[name] = new (this._viewForAction(name))();
-            this.rootView.append(this.views[name]);
-          }
-          _ref2 = this.views;
-          for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
-            view = _ref2[_i];
-            view.visible(false);
-          }
-          this.views[name].layout();
-          this.views[name].visible(true);
-          return this[name]();
-        };
-        _results.push(this.route(route, name, callback));
+        console.log("making call back for " + name + " using " + route);
+        this.route(route, name, _.bind(callback, this, name));
       }
-      return _results;
+      return true;
     },
     _viewForAction: function(name) {
       var view;

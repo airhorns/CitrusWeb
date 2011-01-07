@@ -3,23 +3,32 @@ Backbone.UkiController = Backbone.Controller.extend
   viewPath: (->
     Backbone.Views ||= {}
     return Backbone.Views)()
+
   rootView: window
   # Bind all defined routes to `Backbone.history`.
   # @override
+
   _bindRoutes : () ->
     return unless @routes?
+    callback = (name) ->
+      console.log "#{name} action has been called."
+      unless @views[name]?
+        @views[name] = new (this._viewForAction(name))()
+        @rootView.append @views[name]
+      
+      for name, view of @views
+        view.visible(false)
+      
+      @views[name].visible(true)
+      @views[name].layout()
+
+      this[name]()
+
     for route, name of @routes
-      callback = ->
-        unless @views[name]?
-          @views[name] ?= new (this._viewForAction(name))()
-          @rootView.append @views[name]
-        view.visible(false) for view in @views
-        @views[name].layout()
-        @views[name].visible(true)
+      console.log "making call back for #{name} using #{route}"
+      this.route(route, name, _.bind(callback, this, name))
 
-        this[name]()
-
-      this.route(route, name, callback)
+    return true
 
   # Overridable method to determine which view to be rendered
   # based on the name of the action. Defaults to using the

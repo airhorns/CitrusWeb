@@ -7,10 +7,10 @@ javascripts:
     - public/javascripts/jquery-ui.js
     - public/javascripts/uki.js
     - public/javascripts/rails.js
-    - public/javascripts/handlebars.js
+    #- public/javascripts/handlebars.js
     - public/javascripts/underscore.js
     - public/javascripts/backbone.js
-    - client_app/views/**/*.bars
+    #- client_app/views/**/*.bars
     - public/javascripts/bootstrap.js
     - public/javascripts/application.js
     - public/javascripts/basic_application.js
@@ -18,6 +18,7 @@ javascripts:
     - public/javascripts/controllers/citrus_controller.js
     - public/javascripts/controllers/**/*.js
     - public/javascripts/views/uki_view.js
+    - public/javascripts/views/app.js
     - public/javascripts/views/**/*.js
     - public/javascripts/**/*.js
     - public/javascripts/start.js
